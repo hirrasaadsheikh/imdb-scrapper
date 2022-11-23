@@ -1,5 +1,10 @@
 const puppeteer = require("puppeteer");
 
+function delay(time) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, time)
+    });
+}
 async function imdb (){
     try {
         const browser = await puppeteer.launch({headless: false, slowMo:10});
